@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CalorieBuddy</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: rgb(255, 255, 255);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    /* Add a black background color to the top navigation */
+    .navBar {
+      overflow: hidden;
+      background-color: #333;
+    }
+ 
+    /* Style the links inside the navigation bar */
+    .navBar a {
+      font-size: 15px;
+      text-align: center;
+      padding: 18px 20px;
+      float: left;
+      color: #f2f2f2;
+      text-decoration: none;  
+      border-right:1px solid #bbb;
+    }
+    
+    /* Change the color of links on hover */
+    .navBar a:hover {
+      background-color: rgb(146, 158, 230);
+      color: rgb(0, 0, 0);
+    }
+
+    .margin {
+      margin-right: 100px;
+      margin-left: 100px;
+      text-align: center;
+    }
+
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Calorie Buddy</h1>
+
+  <div class="navBar">
+    <a href="/topic7/mid-term/">Home</a></li>    
+    <a href="/topic7/mid-term/listfoodpage">List food</a></li>
+    <a href="/topic7/mid-term/searchfoodpage">Search food</a></li>
+    <a href="/topic7/mid-term/addfoodpage">Add food</a></li>
+    <a href="/topic7/mid-term/updatefoodpage">Update food</a></li>
+    <a href="/topic7/mid-term/deletefoodpage">Delete food</a></li>
+    <a href="/topic7/mid-term/aboutpage">About</a></li>
+  </div>
+
+  <div class = "margin">
+    <h2>This is the delete food page. </h2>
+
+    <p>This is data for the food item that you want to delete:</p>
+
+    <table style="width:100%">
+      <tr>
+        <th>Food ID</th>
+        <th>Food name</th>
+        <th>Typical Value</th> 
+        <th>Unit</th>
+        <th>Calories</th>
+        <th>Carbs</th>
+        <th>Fat</th>
+        <th>Protein</th>
+        <th>Salt</th>
+        <th>Sugar</th>
+      </tr>
+      <% available.forEach(function(food){ %>
+      <tr>
+        <td><%= food.id %></td>
+        <td><%= food.name %></td>
+        <td><%= food.typicalValue %></td>
+        <td><%= food.unitOfTypicalValue %></td> 
+        <td><%= food.calories %></td>
+        <td><%= food.carbs %></td>
+        <td><%= food.fats %></td>
+        <td><%= food.protein %></td> 
+        <td><%= food.salt %></td>
+        <td><%= food.sugar %></td>
+        <% }) %>
+      </tr>
+    </table>
+
+    <h3>Delete food</h3> 
+
+    <p>Input first value from table above for food id.</p>
+
+    <form method='POST' action="/topic7/mid-term/deletefoodpage">
+        <label for="id">Food id:</label><br>
+        <input type="number" id="id" name="id" value = "" ><br><br>
+        <input type="submit" onclick="return confirm('Are you sure?')"value="Delete">
+    </form>
+  </div>
+</body>
+</html>

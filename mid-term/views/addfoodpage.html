@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CalorieBuddy</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: rgb(255, 255, 255);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    /* Add a black background color to the top navigation */
+    .navBar {
+      overflow: hidden;
+      background-color: #333;
+    }
+ 
+     /* Style the links inside the navigation bar */
+     .navBar a {
+      font-size: 15px;
+      text-align: center;
+      padding: 18px 20px;
+      float: left;
+      color: #f2f2f2;
+      text-decoration: none;  
+      border-right:1px solid #bbb;
+    }
+    
+    /* Change the color of links on hover */
+    .navBar a:hover {
+      background-color: rgb(146, 158, 230);
+      color: rgb(0, 0, 0);
+    }
+
+    .margin {
+      margin-right: 100px;
+      margin-left: 100px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Calorie Buddy</h1>
+
+  <div class="navBar">
+    <a href="/topic7/mid-term/">Home</a></li>    
+    <a href="/topic7/mid-term/listfoodpage">List food</a></li>
+    <a href="/topic7/mid-term/searchfoodpage">Search food</a></li>
+    <a href="/topic7/mid-term/addfoodpage">Add food</a></li>
+    <a href="/topic7/mid-term/updatefoodpage">Update food</a></li>
+    <a href="/topic7/mid-term/deletefoodpage">Delete food</a></li>
+    <a href="/topic7/mid-term/aboutpage">About</a></li>
+  </div>
+
+  <div class = "margin">
+    <h2>Add food data to database.</h2>
+
+    <p>Input nutritional data about food item to database here.</p>
+
+    <form method='POST' action="/topic7/mid-term/addfoodpage">
+      <label for="name">Food name:</label><br>
+      <input type="text" id="name" name="name" value=""><br><br>
+
+      <label for="typicalValue">Typical Value:</label><br>
+      <input type="number" id="typicalValue" name="typicalValue" value=""><br><br>
+
+      <label for="unitOfTypicalValue">Unit of Typical Value:</label><br>
+      <input type="text" id="unitOfTypicalValue" name="unitOfTypicalValue" value=""><br><br>
+
+      <label for="calories">Calories:</label><br>
+      <input type="number" id="calories" name="calories" value=""><br><br>
+
+      <label for="carbs">Carbs:</label><br>
+      <input type="number" id="carbs" name="carbs" value=""><br><br>
+
+      <label for="fats">Fats:</label><br>
+      <input type="number" id="fats" name="fats" value=""><br><br>
+
+      <label for="protein">Protein:</label><br>
+      <input type="number" id="protein" name="protein" value=""><br><br>
+
+      <label for="salt">Salt:</label><br>
+      <input type="number" id="salt" name="salt" value=""><br><br>
+
+      <label for="sugar">Sugar:</label><br>
+      <input type="number" id="sugar" name="sugar" value=""><br><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>    
+</body>
+</html>
